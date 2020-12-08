@@ -1,0 +1,51 @@
+{% extends 'SecondLayout.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEVATOR</title>
+    <style>
+        .bg{
+            background-image: url(/static/elevator1.jpg);
+            background-position:top center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-attachment:fixed;
+        }
+		.block{
+		    background-image: linear-gradient(to top left, #0e0e0e98 0%, #080808 97%);
+            background-position:top center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-attachment:fixed;
+			padding:50px;
+			margin-right:100px;
+            font-family: Jazz LET, fantasy;
+            font-size: 40px;
+            margin-top:100px;
+            max-width: 500px;
+            max-height: 400px;
+            margin-bottom: 50px;
+            margin-left:50px;
+            border-style: groove;
+            float: right;
+            color: black;
+            -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: black;
+			
+		}
+    </style>
+</head>
+<body class="bg">
+	<div class="block">
+    <center><p style="font-weight: bold;text-decoration: underline;">ELEVATOR PORTAL</p><br>
+    <p style="font-weight: bold;color:green-yellow;">Status : {{data.status}}</p>
+    <p style="font-weight: bold;">Room : {{data.room}}</p>
+    </center>
+	</div>
+</body>
+</html>
+{% endblock %}
